@@ -6,8 +6,17 @@ class Solution:
         # Round final answer to 5 decimal places
         # f(5) = 5 - 0.01 * 2(5)
 
-        minimizer = init
+        # theta := theta - alpha * nabla theta * loss function
+
+        minimizer = init # Set x = init = minimizer | f(minimizer) = f(5) = x^2
+        
         for _ in range(iterations):
-            derivative = 2 * minimizer 
-            minimizer = minimizer  - learning_rate * derivative
-        return round(minimizer,5)
+            gradient = 2 * minimizer
+            minimizer = minimizer - learning_rate * gradient 
+        return round(minimizer, 5)
+
+
+
+        
+
+    
